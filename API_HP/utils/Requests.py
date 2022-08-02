@@ -86,26 +86,4 @@ class Requests:
             self.logs.console_save(msg=e)
             return {"msg": "{0}|{1}请求超时".format(self.__method, self.__url)}
 
-# if __name__ == "__main__":
-#     url = "https://10.50.29.64//Copy/CopyConfigDyn.xml"
-#     headers={'Content-Type': 'text/xml',
-#              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71',
-#              'Cookie': 'sid=s1952d94a-99f87ac563217a5a3994f59298973f1f'
-#              }
-#
-#     data=""" <cpcfgdyn:CopyConfigDyn xmlns:copy="http://www.hp.com/schemas/imaging/con/copy/2008/07/07" xmlns:cpcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/cpcfgdyn/2008/05/05" xmlns:
-# dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/cpcfgdyn
-# /2008/05/05 ../schemas/CopyConfigDyn.xsd">
-#     <copy:DefaultLighterDarker>5</copy:DefaultLighterDarker>
-#     <copy:DefaultNumberOfCopies>1</copy:DefaultNumberOfCopies>
-#     <copy:DefaultOptimize>Mixed</copy:DefaultOptimize>
-#     <copy:DefaultReduceEnlarge>original</copy:DefaultReduceEnlarge>
-#     <copy:DefaultTraySelect>Tray1</copy:DefaultTraySelect>
-#     <copy:DefaultCollation>disabled</copy:DefaultCollation>
-#     <copy:DefaultCopyQuality>normal</copy:DefaultCopyQuality>
-#     <copy:DefaultMarginOff>enabled</copy:DefaultMarginOff>
-#     <dd:CopySides>simplexToSimplex</dd:CopySides>
-#     <cpcfgdyn:DefaultOutputType>color</cpcfgdyn:DefaultOutputType>
-# </cpcfgdyn:CopyConfigDyn>"""
-#     r = Requests(url=url, method="PUT",headers=headers,data=data)
-#     print(r.transfer_station())
+
