@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<susb:SendUSBServiceDyn xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dsd="http://www.hp.com/schemas/imaging/con/digitalsending/2009/02/11" xmlns:susb="http://www.hp.com/schemas/imaging/con/ledm/sendusbservice/2016/07/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../../schemas/dd/DataDictionaryMasterLEDM.xsd http://www.hp.com/schemas/imaging/con/digitalsending/2009/02/11 ../../schemas/digitalsend/digitalsending.xsd http://www.hp.com/schemas/imaging/con/ledm/sendusbservice/2016/07/13 ../../schemas/SendUSBService.xsd">
+    <dd:Version>
+        <dd:Revision>SVN-IPG-LEDM.217</dd:Revision>
+        <dd:Date>2011-02-14</dd:Date>
+    </dd:Version>
+    <susb:SendUSBServiceEnabled>enabled</susb:SendUSBServiceEnabled>
+    <susb:DefaultJob>
+        <dsd:ScanSettings>
+            <dd:Exposure>2</dd:Exposure>
+            <dd:OriginalContentOrientation>Landscape</dd:OriginalContentOrientation>
+            <dd:ScanMediaSize>letter</dd:ScanMediaSize>
+            <dd:ScanPlexMode>Duplex</dd:ScanPlexMode>
+        </dsd:ScanSettings>
+        <dsd:AttachmentSettings>
+            <dd:DSAttachmentSize>standard</dd:DSAttachmentSize>
+            <dd:DSColorPreference>color</dd:DSColorPreference>
+            <dd:DSFileType>pdf</dd:DSFileType>
+            <dd:DSImageResolution>400dpi</dd:DSImageResolution>
+            <dd:FileName>scan</dd:FileName>
+            <dd:EncryptAttachment>disabled</dd:EncryptAttachment>
+            <dd:CompressAttachment>disabled</dd:CompressAttachment>
+            <dd:ColorGrayscaleTiffCompression>TiffPost6</dd:ColorGrayscaleTiffCompression>
+            <dd:MonochromeTiffCompression>G4</dd:MonochromeTiffCompression>
+            <dd:FileNameIsEditable>true</dd:FileNameIsEditable>
+            <dd:FileNamePrefix>%DEVICE_DATE_MMDDYYYY%</dd:FileNamePrefix>
+            <dd:FileNameSuffix>%DEVICE_DATE_MMDDYYYY%</dd:FileNameSuffix>
+            <dsd:DSFileTypeIsEditable>true</dsd:DSFileTypeIsEditable>
+        </dsd:AttachmentSettings>
+        <susb:Destination>
+            <susb:Path>\HPSCANS</susb:Path>
+        </susb:Destination>
+    </susb:DefaultJob>
+</susb:SendUSBServiceDyn>

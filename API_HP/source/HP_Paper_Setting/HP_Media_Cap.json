@@ -1,0 +1,215 @@
+{
+	"version": "1.0.0",
+	"validators": [
+	{
+		"resourceName": "mediaConfiguration",
+		"propertyPointer": "/mediaSettings/tray1/mediaSize",
+		"disabled": "false",
+		"options": [
+		{
+			"sValue": "iso_a4_210x297mm"
+
+		},
+		{
+			"sValue": "na_legal_8.5x14in"
+
+		},
+		{
+			"sValue": "na_letter_8.5x11in"
+
+		},
+		{
+			"sValue": "na_foolscap_8.5x13in"
+
+		},
+		{
+			"sValue": "custom"
+		} ]
+
+	},
+	{
+		"resourceName": "mediaConfiguration",
+		"propertyPointer": "/mediaSettings/tray1/mediaType",
+		"disabled": "false",
+		"options": [
+		{
+			"sValue": "plain"
+
+		},
+		{
+			"sValue": "lightWeight"
+
+		},
+		{
+			"sValue": "stationery-letterhead"
+		} ]
+
+	},
+	{
+		"resourceName": "mediaConfiguration",
+		"propertyPointer": "/mediaSettings/tray2/mediaSize",
+		"disabled": "false",
+		"options": [
+		{
+			"sValue": "na_letter_8.5x11in"
+
+		},
+		{
+			"sValue": "na_legal_8.5x14in"
+
+		},
+		{
+			"sValue": "na_executive_7.25x10.5in"
+
+		},
+		{
+			"sValue": "na_govt-letter_8x10in"
+
+		},
+		{
+			"sValue": "na_invoice_5.5x8.5in"
+
+		},
+		{
+			"sValue": "na_foolscap_8.5x13in"
+
+		},
+		{
+			"sValue": "om_photo_89x127mm"
+
+		},
+		{
+			"sValue": "custom_photo-2l-size-card_127x178mm"
+
+		},
+		{
+			"sValue": "custom_photo_4x5in"
+
+		},
+		{
+			"sValue": "custom_photo_4x12in"
+
+		},
+		{
+			"sValue": "na_index-3x5_3x5in"
+
+		},
+		{
+			"sValue": "na_index-4x6_4x6in"
+
+		},
+		{
+			"sValue": "na_5x7_5x7in"
+
+		},
+		{
+			"sValue": "na_index-5x8_5x8in"
+
+		},
+		{
+			"sValue": "iso_a4_210x297mm"
+
+		},
+		{
+			"sValue": "iso_a5_148x210mm"
+
+		},
+		{
+			"sValue": "iso_a6_105x148mm"
+
+		},
+		{
+			"sValue": "jis_b5_182x257mm"
+
+		},
+		{
+			"sValue": "iso_b5_176x250mm"
+
+		},
+		{
+			"sValue": "om_small-photo_100x150mm"
+
+		},
+		{
+			"sValue": "jpn_hagaki_100x148mm"
+
+		},
+		{
+			"sValue": "jpn_oufuku-rot_148x200mm"
+
+		},
+		{
+			"sValue": "na_number-10_4.125x9.5in"
+
+		},
+		{
+			"sValue": "na_monarch_3.875x7.5in"
+
+		},
+		{
+			"sValue": "iso_c5_162x229mm"
+
+		},
+		{
+			"sValue": "iso_c6_114x162mm"
+
+		},
+		{
+			"sValue": "iso_dl_110x220mm"
+
+		},
+		{
+			"sValue": "na_a2_4.375x5.75in"
+
+		},
+		{
+			"sValue": "jpn_chou3_120x235mm"
+
+		},
+		{
+			"sValue": "jpn_chou4_90x205mm"
+
+		},
+		{
+			"sValue": "na_personal_3.625x6.5in"
+
+		},
+		{
+			"sValue": "custom"
+		} ]
+
+	},
+	{
+		"resourceName": "mediaConfiguration",
+		"propertyPointer": "/mediaSettings/tray2/mediaType",
+		"disabled": "false",
+		"options": [
+		{
+			"sValue": "plain"
+
+		},
+		{
+			"sValue": "photoStandard"
+
+		},
+		{
+			"sValue": "specialtyMatte"
+
+		},
+		{
+			"sValue": "specialtyGlossy"
+
+		},
+		{
+			"sValue": "thickPlain"
+
+		},
+		{
+			"sValue": "lightWeight"
+
+		},
+		{
+			"sValue": "stationery-letterhead"
+		} ]
+	} ]
+}

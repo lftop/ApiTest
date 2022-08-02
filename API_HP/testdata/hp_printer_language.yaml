@@ -1,0 +1,60 @@
+module:
+  des: HP_API_Edit_printer_language接口
+  url: /cdm/controlPanel/v1/configuration
+  content_type: json
+  headers:
+    Content-Type: application/json
+    User-Agent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
+    Cookie: get_cookie
+  isRun: True
+  template: HP_Scan\\HP_Scan_Usb_Setting_Payload.xml
+  orignal_template: HP_Scan\\HP_Scan_Usb_Setting_Dyn.xml
+  case:
+    -
+      title: "Setting the printer language is en"
+      step:
+        -
+          method: PUT
+          payload:
+            json:
+              deviceLanguage: en
+              displayContrast: 100
+              keyPressVolume: soft
+              version: 1.0.0
+        -
+          method: GET
+          payload:
+            param: None
+      check_items:
+        ele_txt:
+          key: deviceLanguage
+          value: en
+        status: 200
+    -
+      title: "Setting the printer language is fr"
+      step:
+        -
+          method: PUT
+          payload:
+            json:
+              deviceLanguage: fr
+              displayContrast: '100'
+              keyPressVolume: soft
+              version: 1.0.0
+        -
+          method: GET
+          payload:
+            param: None
+      check_items:
+        status: 200
+        ele_txt:
+          key: deviceLanguage
+          value: fr
+
+
+
+
+
+
+
+

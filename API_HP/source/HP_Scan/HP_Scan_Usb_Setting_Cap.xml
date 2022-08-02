@@ -1,0 +1,214 @@
+<susb:SendUSBServiceCap xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dsd="http://www.hp.com/schemas/imaging/con/digitalsending/2009/02/11" xmlns:dsdcap="http://www.hp.com/schemas/imaging/con/ledm/digitalsendingcap/2010/11/22" xmlns:susb="http://www.hp.com/schemas/imaging/con/ledm/sendusbservice/2016/07/13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../../schemas/dd/DataDictionaryMasterLEDM.xsd http://www.hp.com/schemas/imaging/con/digitalsending/2009/02/11 ../../schemas/digitalsend/digitalsending.xsd http://www.hp.com/schemas/imaging/con/ledm/digitalsendingcap/2010/11/22 ../../schemas/DigitalSendingCap.xsd http://www.hp.com/schemas/imaging/con/ledm/sendusbservice/2016/07/13 ../../schemas/SendUSBService.xsd">
+<dd:Version>
+<dd:Revision>SVN-IPG-LEDM.217</dd:Revision>
+<dd:Date>2011-02-14</dd:Date>
+</dd:Version>
+<susb:NumberOfEntriesSupported typeof="dd:NonNegativeInteger" elementXPath="/susb:PredefinedJobs/susb:PredefinedJob" min="0" max="25" step="1" access="readOnly"/>
+<susb:SendUSBServiceEnabledSupport typeof="dd:EnableDisable" selected="enabled" deselected="disabled" elementXPath="/susb:SendUSBServiceDyn/susb:SendUSBServiceEnabled" access="readWrite"/>
+<susb:PredefinedJobSupport>
+<dsdcap:ScanSettingsSupport>
+<dsdcap:ExposureSupport typeof="dd:NonNegativeInteger" min="1" max="9" step="1" elementXPath="susb:PredefinedJob/dsd:ScanSettings/dd:Exposure" access="readWrite"/>
+<dsdcap:OriginalContentOrientationSupport elementXPath="susb:PredefinedJob/dsd:ScanSettings/dd:OriginalContentOrientation" access="readWrite" default="Portrait">
+<dd:OriginalContentOrientation>Landscape</dd:OriginalContentOrientation>
+<dd:OriginalContentOrientation>Portrait</dd:OriginalContentOrientation>
+</dsdcap:OriginalContentOrientationSupport>
+<dsdcap:ScanMediaSizeSupport elementXPath="susb:PredefinedJob/dsd:ScanSettings/dd:ScanMediaSize" access="readWrite" default="letter">
+<dd:ScanMediaSize>any</dd:ScanMediaSize>
+<dd:ScanMediaSize>letter</dd:ScanMediaSize>
+<dd:ScanMediaSize>legal</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_executive_7.25x10.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_invoice_5.5x8.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_legal_8.5x13in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_legal_216x340mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-3x5_3x5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-4x6_4x6in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-5x7_5x7in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-5x8_5x8in</dd:ScanMediaSize>
+<dd:ScanMediaSize>a4</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_a5_148x210mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_a6_105x148mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jis_b5_182x257mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jis_b6_128x182mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>om_photo_89x127mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>om_small-photo_100x150mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>prc_16k_195x270mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>prc_16k_184x260mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>prc_16k_197x273mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_hagaki_100x148mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_oufuku_148x200mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_number-10_4.125x9.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_monarch_3.875x7.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_dl_110x220mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_b5_176x250mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_c5_162x229mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_c6_114x162mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_chou3_120x235mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_chou4_90x205mm</dd:ScanMediaSize>
+</dsdcap:ScanMediaSizeSupport>
+<dsdcap:ScanPlexModeSupport elementXPath="susb:PredefinedJob/dsd:ScanSettings/dd:ScanPlexMode" access="readWrite" default="Simplex">
+<dd:ScanPlexMode>Simplex</dd:ScanPlexMode>
+<dd:ScanPlexMode>Duplex</dd:ScanPlexMode>
+</dsdcap:ScanPlexModeSupport>
+</dsdcap:ScanSettingsSupport>
+<dsdcap:AttachmentSettingsSupport>
+<dsdcap:DSAttachmentSizeSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:DSAttachmentSize" access="readWrite" default="standard">
+<dd:DSAttachmentSize>small</dd:DSAttachmentSize>
+<dd:DSAttachmentSize>standard</dd:DSAttachmentSize>
+<dd:DSAttachmentSize>large</dd:DSAttachmentSize>
+</dsdcap:DSAttachmentSizeSupport>
+<dsdcap:DSColorPreferenceSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:DSColorPreference" access="readWrite" default="color">
+<dd:DSColorPreference>color</dd:DSColorPreference>
+<dd:DSColorPreference>monochrome</dd:DSColorPreference>
+<dd:DSColorPreference>grayscale</dd:DSColorPreference>
+</dsdcap:DSColorPreferenceSupport>
+<dsdcap:DSFileTypeSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:DSFileType" access="readWrite" default="pdf">
+<dd:DSFileType>jpeg</dd:DSFileType>
+<dd:DSFileType>pdf</dd:DSFileType>
+<dd:DSFileType>pdfa</dd:DSFileType>
+<dd:DSFileType>tiff</dd:DSFileType>
+<dd:DSFileType>xps</dd:DSFileType>
+</dsdcap:DSFileTypeSupport>
+<dsdcap:DSImageResolutionSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:DSImageResolution" access="readWrite" default="300dpi">
+<dd:DSImageResolution>75dpi</dd:DSImageResolution>
+<dd:DSImageResolution>150dpi</dd:DSImageResolution>
+<dd:DSImageResolution>200dpi</dd:DSImageResolution>
+<dd:DSImageResolution>300dpi</dd:DSImageResolution>
+<dd:DSImageResolution>400dpi</dd:DSImageResolution>
+<dd:DSImageResolution>600dpi</dd:DSImageResolution>
+</dsdcap:DSImageResolutionSupport>
+<dsdcap:FileNameSupport typeof="dd:String" minLength="0" length="255" elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:FileName" access="readWrite"/>
+<dsdcap:EncryptAttachmentSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:EncryptAttachment" access="readWrite" default="disabled">
+<dd:EncryptAttachment>disabled</dd:EncryptAttachment>
+<dd:EncryptAttachment>enabled</dd:EncryptAttachment>
+</dsdcap:EncryptAttachmentSupport>
+<dsdcap:CompressAttachmentSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:CompressAttachment" access="readWrite" default="disabled">
+<dd:CompressAttachment>disabled</dd:CompressAttachment>
+<dd:CompressAttachment>enabled</dd:CompressAttachment>
+</dsdcap:CompressAttachmentSupport>
+<dsdcap:ColorGrayscaleTiffCompressionSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:ColorGrayscaleTiffCompression" access="readWrite" default="TiffPost6">
+<dd:ColorGrayscaleTiffCompression>Tiff6</dd:ColorGrayscaleTiffCompression>
+<dd:ColorGrayscaleTiffCompression>TiffPost6</dd:ColorGrayscaleTiffCompression>
+</dsdcap:ColorGrayscaleTiffCompressionSupport>
+<dsdcap:MonochromeTiffCompressionSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:MonochromeTiffCompression" access="readWrite" default="G4">
+<dd:MonochromeTiffCompression>G4</dd:MonochromeTiffCompression>
+</dsdcap:MonochromeTiffCompressionSupport>
+<dsdcap:FileNameIsEditableSupport elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:FileNameIsEditable" access="readWrite" default="true">
+<dd:FileNameIsEditable>false</dd:FileNameIsEditable>
+<dd:FileNameIsEditable>true</dd:FileNameIsEditable>
+</dsdcap:FileNameIsEditableSupport>
+<dsdcap:FileNamePrefixSupport typeof="dd:String" minLength="0" length="255" elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:FileNamePrefix" access="readWrite"/>
+<dsdcap:FileNameSuffixSupport typeof="dd:String" minLength="0" length="255" elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dd:FileNameSuffix" access="readWrite"/>
+<dsdcap:DSFileTypeIsEditable typeof="dd:Boolean" selected="true" deselected="false" elementXPath="susb:PredefinedJob/dsd:AttachmentSettings/dsd:DSFileTypeIsEditable" access="readWrite"/>
+</dsdcap:AttachmentSettingsSupport>
+<susb:DestinationSupport>
+<susb:PathSupport typeof="dd:String" minLength="0" length="127" elementXPath="susb:SendUSBServiceDyn/susb:PredefinedJob/susb:Destinations/susb:Path" access="readWrite"/>
+</susb:DestinationSupport>
+<dsdcap:DisplaySettingsSupport>
+<dsdcap:NameSupport typeof="dd:String" length="258" elementXPath="susb:PredefinedJob/dsd:DisplaySettings/dd:Name" access="readWrite"/>
+<dsdcap:DescriptionSupport typeof="dd:String" length="258" elementXPath="susb:PredefinedJob/dsd:DisplaySettings/dd:Description" access="readWrite"/>
+<dsdcap:OneTouchStartSupport elementXPath="susb:PredefinedJob/dsd:DisplaySettings/dsd:OneTouchStart" access="readWrite" default="false">
+<dsd:OneTouchStart>false</dsd:OneTouchStart>
+<dsd:OneTouchStart>true</dsd:OneTouchStart>
+</dsdcap:OneTouchStartSupport>
+</dsdcap:DisplaySettingsSupport>
+</susb:PredefinedJobSupport>
+<susb:DefaultJobSupport>
+<dsdcap:ScanSettingsSupport>
+<dsdcap:ExposureSupport typeof="dd:NonNegativeInteger" min="1" max="9" step="1" elementXPath="susb:DefaultJob/dsd:ScanSettings/dd:Exposure" access="readWrite"/>
+<dsdcap:OriginalContentOrientationSupport elementXPath="susb:DefaultJob/dsd:ScanSettings/dd:OriginalContentOrientation" access="readWrite" default="Portrait">
+<dd:OriginalContentOrientation>Landscape</dd:OriginalContentOrientation>
+<dd:OriginalContentOrientation>Portrait</dd:OriginalContentOrientation>
+</dsdcap:OriginalContentOrientationSupport>
+<dsdcap:ScanMediaSizeSupport elementXPath="susb:DefaultJob/dsd:ScanSettings/dd:ScanMediaSize" access="readWrite" default="letter">
+<dd:ScanMediaSize>any</dd:ScanMediaSize>
+<dd:ScanMediaSize>letter</dd:ScanMediaSize>
+<dd:ScanMediaSize>legal</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_executive_7.25x10.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_invoice_5.5x8.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_legal_8.5x13in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_legal_216x340mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-3x5_3x5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-4x6_4x6in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-5x7_5x7in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_index-5x8_5x8in</dd:ScanMediaSize>
+<dd:ScanMediaSize>a4</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_a5_148x210mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_a6_105x148mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jis_b5_182x257mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jis_b6_128x182mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>om_photo_89x127mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>om_small-photo_100x150mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>prc_16k_195x270mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>prc_16k_184x260mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>prc_16k_197x273mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_hagaki_100x148mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_oufuku_148x200mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_number-10_4.125x9.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>na_monarch_3.875x7.5in</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_dl_110x220mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_b5_176x250mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_c5_162x229mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>iso_c6_114x162mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_chou3_120x235mm</dd:ScanMediaSize>
+<dd:ScanMediaSize>jpn_chou4_90x205mm</dd:ScanMediaSize>
+</dsdcap:ScanMediaSizeSupport>
+<dsdcap:ScanPlexModeSupport elementXPath="susb:DefaultJob/dsd:ScanSettings/dd:ScanPlexMode" access="readWrite" default="Simplex">
+<dd:ScanPlexMode>Simplex</dd:ScanPlexMode>
+<dd:ScanPlexMode>Duplex</dd:ScanPlexMode>
+</dsdcap:ScanPlexModeSupport>
+</dsdcap:ScanSettingsSupport>
+<dsdcap:AttachmentSettingsSupport>
+<dsdcap:DSAttachmentSizeSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:DSAttachmentSize" access="readWrite" default="standard">
+<dd:DSAttachmentSize>small</dd:DSAttachmentSize>
+<dd:DSAttachmentSize>standard</dd:DSAttachmentSize>
+<dd:DSAttachmentSize>large</dd:DSAttachmentSize>
+</dsdcap:DSAttachmentSizeSupport>
+<dsdcap:DSColorPreferenceSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:DSColorPreference" access="readWrite" default="color">
+<dd:DSColorPreference>color</dd:DSColorPreference>
+<dd:DSColorPreference>monochrome</dd:DSColorPreference>
+<dd:DSColorPreference>grayscale</dd:DSColorPreference>
+</dsdcap:DSColorPreferenceSupport>
+<dsdcap:DSFileTypeSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:DSFileType" access="readWrite" default="pdf">
+<dd:DSFileType>jpeg</dd:DSFileType>
+<dd:DSFileType>pdf</dd:DSFileType>
+<dd:DSFileType>pdfa</dd:DSFileType>
+<dd:DSFileType>tiff</dd:DSFileType>
+<dd:DSFileType>xps</dd:DSFileType>
+</dsdcap:DSFileTypeSupport>
+<dsdcap:DSImageResolutionSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:DSImageResolution" access="readWrite" default="300dpi">
+<dd:DSImageResolution>75dpi</dd:DSImageResolution>
+<dd:DSImageResolution>150dpi</dd:DSImageResolution>
+<dd:DSImageResolution>200dpi</dd:DSImageResolution>
+<dd:DSImageResolution>300dpi</dd:DSImageResolution>
+<dd:DSImageResolution>400dpi</dd:DSImageResolution>
+<dd:DSImageResolution>600dpi</dd:DSImageResolution>
+</dsdcap:DSImageResolutionSupport>
+<dsdcap:FileNameSupport typeof="dd:String" minLength="0" length="255" elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:FileName" access="readWrite"/>
+<dsdcap:EncryptAttachmentSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:EncryptAttachment" access="readWrite" default="disabled">
+<dd:EncryptAttachment>disabled</dd:EncryptAttachment>
+<dd:EncryptAttachment>enabled</dd:EncryptAttachment>
+</dsdcap:EncryptAttachmentSupport>
+<dsdcap:CompressAttachmentSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:CompressAttachment" access="readWrite" default="disabled">
+<dd:CompressAttachment>disabled</dd:CompressAttachment>
+<dd:CompressAttachment>enabled</dd:CompressAttachment>
+</dsdcap:CompressAttachmentSupport>
+<dsdcap:ColorGrayscaleTiffCompressionSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:ColorGrayscaleTiffCompression" access="readWrite" default="TiffPost6">
+<dd:ColorGrayscaleTiffCompression>Tiff6</dd:ColorGrayscaleTiffCompression>
+<dd:ColorGrayscaleTiffCompression>TiffPost6</dd:ColorGrayscaleTiffCompression>
+</dsdcap:ColorGrayscaleTiffCompressionSupport>
+<dsdcap:MonochromeTiffCompressionSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:MonochromeTiffCompression" access="readWrite" default="G4">
+<dd:MonochromeTiffCompression>G4</dd:MonochromeTiffCompression>
+</dsdcap:MonochromeTiffCompressionSupport>
+<dsdcap:FileNameIsEditableSupport elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:FileNameIsEditable" access="readWrite" default="true">
+<dd:FileNameIsEditable>false</dd:FileNameIsEditable>
+<dd:FileNameIsEditable>true</dd:FileNameIsEditable>
+</dsdcap:FileNameIsEditableSupport>
+<dsdcap:FileNamePrefixSupport typeof="dd:String" minLength="0" length="255" elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:FileNamePrefix" access="readWrite"/>
+<dsdcap:FileNameSuffixSupport typeof="dd:String" minLength="0" length="255" elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dd:FileNameSuffix" access="readWrite"/>
+<dsdcap:DSFileTypeIsEditable typeof="dd:Boolean" selected="true" deselected="false" elementXPath="susb:DefaultJob/dsd:AttachmentSettings/dsd:DSFileTypeIsEditable" access="readWrite"/>
+</dsdcap:AttachmentSettingsSupport>
+<susb:DestinationSupport>
+<susb:PathSupport typeof="dd:String" minLength="0" length="127" elementXPath="susb:SendUSBServiceDyn/susb:DefaultJob/susb:Destinations/susb:Path" access="readWrite"/>
+</susb:DestinationSupport>
+</susb:DefaultJobSupport>
+</susb:SendUSBServiceCap>

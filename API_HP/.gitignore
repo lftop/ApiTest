@@ -1,0 +1,6 @@
+##Git ignore
+.pytest_cache/*
+result/
+
+#Enviroment
+venv/

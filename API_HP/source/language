@@ -1,0 +1,152 @@
+{
+	"version": "1.0.0",
+	"validators": [
+	{
+		"resourceName": "configuration",
+		"propertyPointer": "/displayContrast",
+		"disabled": "false",
+		"min": 25,
+		"max": 100,
+		"step": 25
+
+	},
+	{
+		"resourceName": "configuration",
+		"propertyPointer": "/keyPressVolume",
+		"disabled": "false",
+		"options": [
+		{
+			"sValue": "loud"
+
+		},
+		{
+			"sValue": "medium"
+
+		},
+		{
+			"sValue": "soft"
+
+		},
+		{
+			"sValue": "off"
+		} ]
+
+	},
+	{
+		"resourceName": "configuration",
+		"propertyPointer": "/deviceLanguage",
+		"disabled": "false",
+		"options": [
+		{
+			"sValue": "en"
+
+		},
+		{
+			"sValue": "es"
+
+		},
+		{
+			"sValue": "de"
+
+		},
+		{
+			"sValue": "fr"
+
+		},
+		{
+			"sValue": "ar"
+
+		},
+		{
+			"sValue": "it"
+
+		},
+		{
+			"sValue": "pt"
+
+		},
+		{
+			"sValue": "nl"
+
+		},
+		{
+			"sValue": "da"
+
+		},
+		{
+			"sValue": "sv"
+
+		},
+		{
+			"sValue": "no"
+
+		},
+		{
+			"sValue": "fi"
+
+		},
+		{
+			"sValue": "tr"
+
+		},
+		{
+			"sValue": "pl"
+
+		},
+		{
+			"sValue": "el"
+
+		},
+		{
+			"sValue": "ru"
+
+		},
+		{
+			"sValue": "he"
+
+		},
+		{
+			"sValue": "cs"
+
+		},
+		{
+			"sValue": "hu"
+
+		},
+		{
+			"sValue": "sk"
+
+		},
+		{
+			"sValue": "ro"
+
+		},
+		{
+			"sValue": "sl"
+
+		},
+		{
+			"sValue": "bg"
+
+		},
+		{
+			"sValue": "hr"
+
+		},
+		{
+			"sValue": "zh-CN"
+
+		},
+		{
+			"sValue": "ko"
+
+		},
+		{
+			"sValue": "zh-TW"
+
+		},
+		{
+			"sValue": "ja"
+		} ]
+	} ]
+}

@@ -1,0 +1,58 @@
+module:
+  des: HP_API_Copy接口
+  url: /DevMgmt/SendUSB/SendUSBServiceDyn.xml
+  content_type: xml
+  headers:
+    Content-Type: text/xml
+    User-Agent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
+    Cookie: get_cookie
+  isRun: True
+  template: HP_Scan\\HP_Scan_Usb_Setting_Payload.xml
+  orignal_template: HP_Scan\\HP_Scan_Usb_Setting_Dyn.xml
+  case:
+    -
+      title: "Setting the Exposure is between(1-9) as 1"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//dd:Exposure
+              value: '2'
+              namespace:
+                dd: http://www.hp.com/schemas/imaging/con/dictionaries/1.0/
+        -
+          method: GET
+          payload:
+            param: None
+      check_items:
+        status: 200
+        path: dd:Exposure
+        value: '2'
+    -
+      title: "Setting the Exposure is between(0-8) as 0"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//dd:Exposure
+              value: '0'
+              namespace:
+                dd: http://www.hp.com/schemas/imaging/con/dictionaries/1.0/
+        -
+          method: GET
+          payload:
+            param: None
+      check_items:
+        status: 400
+        path: dd:Exposure
+        value: '2'
+
+
+
+
+
+
+
+

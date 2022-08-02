@@ -1,0 +1,227 @@
+module:
+  des: "HP_API_Copy接口"
+  url: /Copy/CopyConfigDyn.xml
+  content_type: xml
+  headers:
+    Content-Type: text/xml
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71
+    Cookie: get_cookie
+  isRun: True
+  template: HP_Copy\\HP_Copy_Payload.xml
+  orignal_template: HP_Copy\\HP_Copy_Orignal.xml
+  case:
+    -
+      title: "Setting the DefaultLighterDarker is between(0-8) as 4"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultLighterDarker
+              value: '4'
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultLighterDarker
+        value: 4
+    -
+      title: "Setting the DefaultLighterDarker is less than min value(0) as -1"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultLighterDarker
+              value: '-1'
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 409
+        path: copy:DefaultLighterDarker
+        value: '4'
+    -
+      title: "Setting the DefaultLightDarker is more than the max value(8) as 9"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultLighterDarker
+              value: '9'
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 409
+        path: copy:DefaultLighterDarker
+        value: '4'
+    -
+      title: "Setting the DefaultNumberOfCopies is between (1-99) as 80"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultNumberOfCopies
+              value: '80'
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultNumberOfCopies
+        value: '80'
+    -
+      title: "Setting the DefaultNumberOfCopies is less than min value(1) as 0"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultNumberOfCopies
+              value: '0'
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 409
+        path: copy:DefaultNumberOfCopies
+        value: '80'
+    -
+      title: "Setting the DefaultNumberOfCopies is more than the max value(99) as 100"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultNumberOfCopies
+              value: '100'
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            data: Null
+      check_items:
+        status: 409
+        path: copy:DefaultNumberOfCopies
+        value: '80'
+    -
+      title: "Setting the DefaultOptimize is Mixed"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultOptimize
+              value: Mixed
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultOptimize
+        value: Mixed
+    -
+      title: "Setting the DefaultOptimize is Mixed"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultOptimize
+              value: AutoDetect
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultOptimize
+        value: AutoDetect
+    -
+      title: "Setting the DefaultOptimize is AutoDetect"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultOptimize
+              value: AutoDetect
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultOptimize
+        value: AutoDetect
+    -
+      title: "Setting the DefaultOptimize is Text"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultOptimize
+              value: Text
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultOptimize
+        value: Text
+    -
+      title: "Setting the DefaultOptimize as an illegal value (GoodsPhoto)"
+      step:
+        -
+          method: PUT
+          payload:
+            data:
+              path: .//copy:DefaultOptimize
+              value: GoodsPhoto
+              namespace:
+                copy: http://www.hp.com/schemas/imaging/con/copy/2008/07/07
+        -
+          method: GET
+          payload:
+            param: Null
+      check_items:
+        status: 200
+        path: copy:DefaultOptimize
+        value: Text
+
+
+
+
+
+

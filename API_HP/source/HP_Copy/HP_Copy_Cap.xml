@@ -1,0 +1,71 @@
+<!--
+  THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN.
+-->
+<cpcfgcap:CopyConfigCap xmlns:cpcfgcap="http://www.hp.com/schemas/imaging/con/ledm/cpcfgcap/2008/05/05" xmlns:cpcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/cpcfgdyn/2008/05/05" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:copy="http://www.hp.com/schemas/imaging/con/copy/2008/07/07" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/cpcfgcap/2008/05/05 ../schemas/CopyConfigCap.xsd">
+<dd:Version>
+<dd:Revision>SVN-IPG-LEDM.122</dd:Revision>
+<dd:Date>2011-10-18</dd:Date>
+</dd:Version>
+<cpcfgcap:CopySupport access="readWrite">
+<copy:Copy>disabled</copy:Copy>
+<copy:Copy>enabled</copy:Copy>
+</cpcfgcap:CopySupport>
+<cpcfgcap:ColorCopySupport access="readWrite">
+<copy:ColorCopy>disabled</copy:ColorCopy>
+<copy:ColorCopy>enabled</copy:ColorCopy>
+</cpcfgcap:ColorCopySupport>
+<cpcfgcap:DefaultLighterDarkerSupport elementXPath="cpcfgdyn:CopyConfigDyn/copy:DefaultLighterDarker" typeof="dd:Int" min="0" max="8" step="1" access="readWrite"/>
+<cpcfgcap:DefaultNumberOfCopiesSupport elementXPath="cpcfgdyn:CopyConfigDyn/copy:DefaultNumberOfCopies" typeof="dd:Int" min="1" max="99" step="1" access="readWrite"/>
+<cpcfgcap:DefaultOptimizeSupport access="readWrite">
+<copy:DefaultOptimize>AutoDetect</copy:DefaultOptimize>
+<copy:DefaultOptimize>Text</copy:DefaultOptimize>
+<copy:DefaultOptimize>Photo</copy:DefaultOptimize>
+<copy:DefaultOptimize>Mixed</copy:DefaultOptimize>
+</cpcfgcap:DefaultOptimizeSupport>
+<cpcfgcap:DefaultReduceEnlargeSupport access="readWrite">
+<copy:DefaultReduceEnlarge>original</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>custom</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>fitToPage</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>2PagesPerSheet</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>fullPage</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>legalToLetter</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>a4ToLetter</copy:DefaultReduceEnlarge>
+<copy:DefaultReduceEnlarge>letterToA4</copy:DefaultReduceEnlarge>
+</cpcfgcap:DefaultReduceEnlargeSupport>
+<cpcfgcap:DefaultReduceEnlargeCustomSupport elementXPath="cpcfgdyn:CopyConfigDyn/copy:DefaultReduceEnlargeCustom" typeof="dd:Int" min="25" max="400" step="1" access="readWrite"/>
+<cpcfgcap:DefaultTraySelectSupport access="readWrite">
+<dd:InputBin>Tray1</dd:InputBin>
+<dd:InputBin>Tray2</dd:InputBin>
+</cpcfgcap:DefaultTraySelectSupport>
+<cpcfgcap:DefaultCollationSupport access="readWrite">
+<copy:DefaultCollation>disabled</copy:DefaultCollation>
+<copy:DefaultCollation>enabled</copy:DefaultCollation>
+</cpcfgcap:DefaultCollationSupport>
+<cpcfgcap:DefaultCopyQuality access="readWrite">
+<copy:DefaultCopyQuality>best</copy:DefaultCopyQuality>
+<copy:DefaultCopyQuality>normal</copy:DefaultCopyQuality>
+<copy:DefaultCopyQuality>draft</copy:DefaultCopyQuality>
+</cpcfgcap:DefaultCopyQuality>
+<cpcfgcap:DefaultMarginOffSupport access="readWrite">
+<copy:DefaultMarginOff>disabled</copy:DefaultMarginOff>
+<copy:DefaultMarginOff>enabled</copy:DefaultMarginOff>
+</cpcfgcap:DefaultMarginOffSupport>
+<cpcfgcap:CopySidesSupport access="readWrite">
+<dd:CopySides>simplexToSimplex</dd:CopySides>
+<dd:CopySides>simplexToDuplex</dd:CopySides>
+<dd:CopySides>duplexToSimplex</dd:CopySides>
+<dd:CopySides>duplexToDuplex</dd:CopySides>
+</cpcfgcap:CopySidesSupport>
+<cpcfgcap:DefaultOutputTypeSupport access="readWrite">
+<cpcfgcap:DefaultOutputType>color</cpcfgcap:DefaultOutputType>
+<cpcfgcap:DefaultOutputType>monochrome</cpcfgcap:DefaultOutputType>
+</cpcfgcap:DefaultOutputTypeSupport>
+<cpcfgcap:DefaultInputSourceSupport access="readWrite">
+<cpcfgcap:DefaultInputSource>Flatbed</cpcfgcap:DefaultInputSource>
+<cpcfgcap:DefaultInputSource>ADF</cpcfgcap:DefaultInputSource>
+</cpcfgcap:DefaultInputSourceSupport>
+<cpcfgcap:DefaultDuplexBindingOptionSupport elementXPath="/cpcfgdyn:CopyConfigDyn/cpcfgdyn:DefaultDuplexBindingOption" access="readWrite">
+<cpcfgcap:DefaultDuplexBindingOption>longEdge</cpcfgcap:DefaultDuplexBindingOption>
+<cpcfgcap:DefaultDuplexBindingOption>shortEdge</cpcfgcap:DefaultDuplexBindingOption>
+</cpcfgcap:DefaultDuplexBindingOptionSupport>
+</cpcfgcap:CopyConfigCap>
