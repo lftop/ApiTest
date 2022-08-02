@@ -2,11 +2,6 @@ import requests
 from requests.auth import HTTPBasicAuth
 from utils.Log import Logs
 
-"""
-
-"""
-
-
 class Requests:
     logs = Logs(types="info")
     auth_account = {"name": "admin", "psw": "12345678"}
